@@ -11,6 +11,13 @@ services:
       - RTC_CONFIG=rtc_config.json # Set to the path of a file that specifies the STUN/TURN servers.
       - DEBUG_MODE=false # Set to true to debug container and peer connections.
       - TZ=Etc/UTC # Time Zone
+      # Disable all social/custom buttons
+      - DONATION_BUTTON_ACTIVE=false
+      - TWITTER_BUTTON_ACTIVE=false
+      - MASTODON_BUTTON_ACTIVE=false
+      - BLUESKY_BUTTON_ACTIVE=false
+      - CUSTOM_BUTTON_ACTIVE=false
+      - PRIVACYPOLICY_BUTTON_ACTIVE=false
     ports:
       - "127.0.0.1:3000:3000" # Web UI. Change the port number before the last colon e.g. `127.0.0.1:9000:3000`
     volumes:
